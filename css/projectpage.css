@@ -171,3 +171,46 @@ li::marker {
         font-size: 1.1rem;
     }
 }
+
+.sublist {
+    display: none;  /* Hide by default */
+    background: #ddd;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+
+
+.sublist li {
+    background: #ccc;
+    padding: 8px;
+    margin: 0;
+}
+button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Add dropdown arrow */
+button::after {
+    content: "▼";
+    font-size: 14px;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate arrow when active */
+button.active::after {
+    transform: rotate(180deg);
+}
