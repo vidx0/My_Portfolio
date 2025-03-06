@@ -214,3 +214,6 @@ button::after {
 button.active::after {
     transform: rotate(180deg);
 }
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
