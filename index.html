@@ -1,409 +1,238 @@
-<!-- HELLO
--
-DevFolio is a minimal, clean, lightweight and fully responsive template for Devlopers!
-Created by Anil Seervi.
--
-GitHub repo: https://github.com/AnilSeervi/DevFolio
-README: https://github.com/AnilSeervi/DevFolio/blob/master/README.md
--
-Have fun creating your portfolio on this template!!! -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-		<!-- Title: add your Portfolio websites's title here -->
-		<title>Vidyut | Developer</title>
-
-		<!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-		<meta name="keywords" content="vidx0, Ai, Java" />
-
-		<!-- Improve your SEO by adding a small descrption of you -->
-		<meta name="description" content="Vidyut | Developer" />
-
-		<!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-		<link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
-
-		<!-- Add your primary-theme color for the value of content -->
-		<meta name="theme-color" content="#36d1dc" />
-
-
-		<!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#0a0a0b" />
 		<meta
-			property="twitter:image"
-			content="https://anilseervi.vercel.app/assets/devfolio.png"
+			name="description"
+			content="Vidyut Senthilkumar — Computer Science student at UIUC building software around AI, data, and systems."
 		/>
-
-		<!-- link tags -->
-		<link rel="preload" as="style" href="./css/main.css" />
-		<link rel="stylesheet" href="./css/main.css" />
-
-		<!-- FontAwesome Icons link -->
+		<title>Vidyut Senthilkumar — Developer</title>
+		<link rel="icon" type="image/png" href="./assets/VS_favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
 		/>
-		<script defer src="./javascript/scrollreveal.min.js"></script>
-		<script
-			defer
-			type="text/javascript"
-			src="./javascript/scrollveal.js"
-		></script>
-
-		<!-- Remove Google Analytics once you have your portfolio website set-up -->
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "UA-122228201-4");
-		</script>
-		<!-- End of Google Analytics -->
+		<link rel="stylesheet" href="./css/portfolio-dark.css" />
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+		<script src="./javascript/supabase-config.js"></script>
+		<script defer src="./javascript/portfolio.js"></script>
 	</head>
 	<body>
-		<!-- Hero Section -->
-		<div id="hero">
-			<section class="container">
-				<h1 class="hero-title">
-					Hi, my name is <span class="text-color-main name">Vidyut</span>
-					<br />
-					Developer.
+		<header class="topbar wrap">
+			<a class="wordmark" href="#top">VS<span>.</span></a>
+			<nav>
+				<a href="#about">About</a><a href="#projects">Projects</a
+				><a href="#contact">Contact</a
+				><a class="nav-admin" href="./admin.html">Admin ↗</a>
+			</nav>
+		</header>
+		<main id="top">
+			<section class="hero wrap">
+				<div class="eyebrow">
+					<span class="status-dot"></span> COMPUTER SCIENCE @ UIUC
+				</div>
+				<h1>
+					Building at the intersection of <span>AI, data, </span> and software
+					engineering.
 				</h1>
-				<p class="hero-cta">
-					<a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+				<p class="hero-copy">
+					I'm Vidyut — a developer who enjoys solving problems, exploring new
+					technologies, and turning ideas into reality.
 				</p>
+				<div class="hero-actions">
+					<a class="button button-primary" href="#projects"
+						>Explore projects <span>↓</span></a
+					><a
+						class="text-link"
+						href="https://github.com/vidx0"
+						target="_blank"
+						rel="noreferrer"
+						>GitHub ↗</a
+					><a
+						class="text-link"
+						href="https://www.linkedin.com/in/vidyuts/"
+						target="_blank"
+						rel="noreferrer"
+						>LinkedIn ↗</a
+					><a
+						class="text-link"
+						id="resume-link"
+						href="https://drive.google.com/file/d/1mY_AfdRjgwIPNCgbUuekGMslI73sQG4h/view?usp=sharing"
+						target="_blank"
+						rel="noreferrer"
+						>Resume ↗</a
+					>
+				</div>
+				<div class="hero-meta">
+					<span>BASED IN ILLINOIS</span><span>SOFTWARE · AI/ML · DATA</span>
+				</div>
 			</section>
-			<a href="#about" class="scroll-down-link" aria-label="scroll-down">
-				<div class="scroll-down"></div
-			></a>
-		</div>
-		<!-- /END Hero Section -->
-
-		<!-- About Section -->
-		<section id="about">
-			<div class="container">
-				<h2 class="section-title">About Me</h2>
-				<div class="row about-wrapper">
-					<div class="about-wrapper__image">
-						<img
-							class="img-fluid"
-							src="./assets/Screenshot 2025-10-26 at 2.39.21 AM.png"
-							alt="Profile Image"
-							width="450"
-							height="350"
-							style="border-radius: 50%"
-						/>
-					</div>
-					<div class="about-wrapper__info">
-						<p class="about-wrapper__info-text">
-							Hi, I'm Vidyut.  with a strong interest in the world of Computer Science, machine learning and finance. Outside of school, I practice Karate and Fencing. In my freetime, I like to draw, listen to music or read. I'm eager to build 
-            				my skills and experience in the future.  </i> 
-						</p>
-						<p class="about-wrapper__info-text">
-              Awards: 1st place team at Illinois State Math Contest, 12th nationaly at the 2023 NorthSouth CompSci Bee, Science Olympiad State Medalist
-              <br>
-              <br>
-              Languages/frameworks/libraries: Java, Python, HTML, CSS, Javascript, SQL, React, Flask, Pandas, Matplotlib, Scikit-learn 
-              <br>
-              <br>
-              <br>
-              <br>
-
-
-						</p>
-						<span class="about-wrapper__cta">
-							<a href="./assets/Vidyut_S_resume.pdf" class="cta-btn cta-btn--resume">View Resume</a>
-						</span>
+			<section class="about section-wrap" id="about">
+				<div class="section-label"><span>01</span> ABOUT</div>
+				<div class="about-content">
+					<h2>Curious by default.<br /><span>Builder by habit.</span></h2>
+					<p>
+						I'm a Computer Science student at the University of Illinois
+						Urbana-Champaign with an interest in building software, exploring
+						new ideas, and tackling challenging problems. I enjoy taking
+						projects from an initial concept to a working product.
+					</p>
+					<p>
+						I'm always learning, experimenting with new technologies, and
+						looking for opportunities to build things that are useful,
+						thoughtful, and impactful.
+					</p>
+					<div class="skill-groups">
+						<div>
+							<span class="mini-label">LANGUAGES</span>
+							<p>Python · C++ · Java · JavaScript · SQL</p>
+						</div>
+						<div>
+							<span class="mini-label">TOOLS & FRAMEWORKS</span>
+							<p>React · Flask · Pandas · scikit-learn · TensorFlow · Git</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-- /END About Section -->
-
-		<!--Projects Section-->
-		<section id="projects">
-			<div class="container">
-				<div class="project-wrapper">
-					<h2 class="section-title dark-blue-text">Projects</h2>
-
-					<!-- Each .row is a project -->
-					<article class="row">
-						<div class="project-wrapper__text">
-							<h3 class="project-wrapper__text-title">Lock In</h3>
-							<p class="project-wrapper__text-info">
-								All students today face distractions from short form media
-								consumption, Lock In offers a solution by transforming studying
-								into a fun, engaging experience. The platform uses a timer to
-								encourage sustained focus, incorporates competitiveness to drive
-								motivation, and integrates short-form educational content to
-								keep learning interesting without distractions. A collaborative
-								forum lets students ask and answer questions while earning
-								digital rewards, fostering a supportive community. By combining
-								focus, competition, and collaboration, Lock In helps students
-								overcome their modern challenges. This project was made by me and Pratham Bansal 
-								to submmit to the Steam Showcase at Vernon Hills High School. We won second in the tech section of the contest. 
+			</section>
+			<section class="projects section-wrap" id="projects">
+				<div class="section-label"><span>02</span> SELECTED WORK</div>
+				<div class="projects-heading">
+					<div>
+						<h2>Things I've built<span>.</span></h2>
+						<p>Experiments, products, and projects that taught me something.</p>
+					</div>
+					<span class="project-count" id="project-count">PROJECTS / 03</span>
+				</div>
+				<div id="project-list" class="project-list">
+					<article class="project-card">
+						<div class="project-index">01 / AI</div>
+						<div class="project-main">
+							<div class="project-topline">
+								<h3>Fluent AI</h3>
+								<span class="project-year">2026</span>
+							</div>
+							<p>
+								A Chrome extension concept to help people with limited English
+								proficiency understand and complete complex forms with
+								multilingual, AI-assisted guidance.
 							</p>
-							<div class="project-wrapper__text-btns">
+							<div class="tags">
+								<span>JavaScript</span><span>AI</span
+								><span>Chrome Extension</span><span>Speech APIs</span>
+							</div>
+							<div class="project-links">
 								<a
-									href="https://github.com/vidx0/Lock_In"
+									href="https://github.com/vidx0/Fluent"
 									target="_blank"
-									class="cta-btn text-color-main"
-									>Source Code</a
+									rel="noreferrer"
+									>Source code ↗</a
+								><a
+									href="https://devpost.com/software/fluent-ai-bqo4d9"
+									target="_blank"
+									rel="noreferrer"
+									>Devpost ↗</a
 								>
-								<a id="toggleVideoBtn" target = "_blank" class="cta-btn text-color-main">Watch Demo</a>
-
-								<div id="videoContainer" class="video-container">
-								  <video
-									src="assets/PrathamB+VidS SteamSubmission.mov"
-									controls
-									width="640"
-								  ></video>
-								</div>
 							</div>
 						</div>
-
-						<div class="project-wrapper__image">
-							<a href="#" target="_blank" rel="noopener noreferrer">
-								<div class="thumbnail rounded">
-									<img
-										src="./assets/LockINLogo.png"
-										class="img-fluid"
-										alt="Project Image"
-										width="1366"
-										height="767"
-									/>
-								</div>
-							</a>
+						<div class="project-visual visual-fluent">
+							<img
+								src="./assets/Fluent_AI_logo.jpeg"
+								alt="Fluent AI project artwork"
+								loading="lazy"
+							/>
 						</div>
 					</article>
-					<!-- /END Project -->
-					<article class="row">
-						<div class="project-wrapper__text">
-							<h3 class="project-wrapper__text-title">Vinance AI</h3>
-							<p class="project-wrapper__text-info">
-								Young adults today face financial turbulence as they navigate adulthood 
-								with minimal money management skills - a recent survey by CreditOne Bank showed that more tha 50% of gen Z entered adulthood with no fiancial education. 
-								Vinance 
-								AI combats this through intelligent financial mentorship powered by machine 
-								learning. The app allows you to manage your budget from one place, uses AI to help you make good financial decisions, 
-								and uses real time data to predict stocks. 
+					<article class="project-card">
+						<div class="project-index">02 / DATA</div>
+						<div class="project-main">
+							<div class="project-topline">
+								<h3>Vinance AI</h3>
+								<span class="project-year">2025–26</span>
+							</div>
+							<p>
+								A finance-focused project exploring market prediction,
+								historical data, media signals, and tools that help people
+								reason about financial decisions.
 							</p>
-							
-					
-							<div class="project-wrapper__text-btns">
+							<div class="tags">
+								<span>Python</span><span>Machine Learning</span
+								><span>Finance</span><span>Data</span>
+							</div>
+							<div class="project-links">
 								<a
 									href="https://github.com/vidx0/Vinance-AI"
 									target="_blank"
-									class="cta-btn text-color-main"
-									>Source Code</a
+									rel="noreferrer"
+									>Source code ↗</a
 								>
-								<a
-								href="Vinance_AI.html"
-								target="_blank"
-								class="cta-btn text-color-main"
-								>Details</a
-							>
+								<a href="./Vinance_AI.html">Project details ↗</a>
 							</div>
 						</div>
-						<div class="project-wrapper__image">
-							<a href="#" target="_blank" rel="noopener noreferrer">
-								<div class="thumbnail rounded">
-									<img
-										src="./assets/Vinance_logo.png"
-										class="img-fluid"
-										alt="Project Image"
-										width="1366"
-										height="767"
-									/>
-								</div>
-							</a>
+						<div class="project-visual visual-vinance">
+							<img
+								src="./assets/Vinance_logo.png"
+								alt="Vinance AI project artwork"
+								loading="lazy"
+							/>
 						</div>
 					</article>
-					<!-- Each .row is a project -->
-					<article class="row">
-						<div class="project-wrapper__text">
-							<h3 class="project-wrapper__text-title">IPV4 Project</h3>
-							<p class="project-wrapper__text-info">
-								A simple quiz page that randomly generates IPV4 addresses for you to practice subnetting.
+					<article class="project-card">
+						<div class="project-index">03 / PRODUCT</div>
+						<div class="project-main">
+							<div class="project-topline">
+								<h3>Lock In</h3>
+								<span class="project-year">2025</span>
+							</div>
+							<p>
+								A student-focused study experience designed to make sustained
+								focus more engaging through timers, competition, and
+								collaborative learning.
 							</p>
-							
-					
-							<div class="project-wrapper__text-btns">
+							<div class="tags">
+								<span>Web Development</span><span>JavaScript</span
+								><span>Product Design</span>
+							</div>
+							<div class="project-links">
 								<a
-									href="https://github.com/vidx0/ipv4_Project"
+									href="https://github.com/vidx0/Lock_In"
 									target="_blank"
-									class="cta-btn text-color-main"
-									>Source Code</a
-								>
-								<a
-									href="https://ipv4-project.vercel.app/"
-									target="_blank"
-									class="cta-btn text-color-main"
-									>Live Demo</a
+									rel="noreferrer"
+									>Source code ↗</a
 								>
 							</div>
 						</div>
-						<div class="project-wrapper__image">
-							<a href="#" target="_blank" rel="noopener noreferrer">
-								<div class="thumbnail rounded">
-									<img
-										src="./assets/IPV4_Project_poster.png"
-										class="img-fluid"
-										alt="Project Image"
-										width="1366"
-										height="767"
-									/>
-								</div>
-							</a>
+						<div class="project-visual visual-lock">
+							<img
+								src="./assets/LockINLogo.png"
+								alt="Lock In project artwork"
+								loading="lazy"
+							/>
 						</div>
 					</article>
-					<!-- /END Project -->
-					<article class="row">
-						<div class="project-wrapper__text">
-							<h3 class="project-wrapper__text-title">Scheduling Website</h3>
-							<p class="project-wrapper__text-info">
-								This project was made for my school's tutoring center. The director had been creating yearly schedules manually, taking several weeks to get every student to tutor in a period that worked for them.
-								When given the students names, and periods of availability for each day, this program generates an optimal schedule for the tutoring center in a matter of seconds.
-							</p>
-							
-					
-							<div class="project-wrapper__text-btns">
-								<a
-									href="https://github.com/vidx0"
-									target="_blank"
-									class="cta-btn text-color-main"
-									>Source Code</a
-								>
-							</div>
-						</div>
-						<div class="project-wrapper__image">
-							<a href="#" target="_blank" rel="noopener noreferrer">
-								<div class="thumbnail rounded">
-									<img
-										src="./assets/scheduling_program_poster.png"
-										class="img-fluid"
-										alt="Project Image"
-										width="1366"
-										height="767"
-									/>
-								</div>
-							</a>
-						</div>
-					</article>
-					<!-- /END Project -->
-
-					<!-- Each .row is a project 
-					<article class="row">
-						<div class="project-wrapper__text">
-							<h3 class="project-wrapper__text-title">Project Title</h3>
-							<p class="project-wrapper__text-info">
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
-								necessitatibus impedit repellendus vero sed ipsa eos beatae ab
-								sint saepe nostrum! Enim, perferendis.
-							</p>
-							<div class="project-wrapper__text-btns">
-								<a
-									href="#"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="cta-btn cta-btn--hero cta-btn--projects"
-									>See Live</a
-								>
-								<a href="#" target="_blank" class="cta-btn text-color-main"
-									>Source Code</a
-								>
-							</div>
-						</div>
-
-						<div class="project-wrapper__image">
-							<a href="#" target="_blank" rel="noopener noreferrer">
-								<div class="thumbnail rounded">
-									<img
-										src="./assets/project.png"
-										class="img-fluid"
-										alt="Project Image"
-										width="1366"
-										height="767"
-									/>
-								</div>
-							</a>
-						</div>
-					</article>
-					/END Project -->
 				</div>
-			</div>
-		</section>
-		<!-- End Projects Section -->
-
-		<!-- Contact Section -->
-		<section id="contact">
-			<div class="container">
-				<h2 class="section-title">Contact</h2>
-				<div class="contact-wrapper">
-					<a href="mailto:vidyutsenthilkumar@gmail.com" class="cta-btn cta-btn--resume">Contact Me</a>
-				</div>
-			</div>
-		</section>
-		<!-- END Contact Section -->
-
-		<!-- Footer Section -->
-		<footer class="footer">
-			<div class="container">
-				<a href="#hero" class="back-to-top" aria-label="go back to top">
-					<i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-				</a>
-				<div class="social-links">
-					<a
-						href="https:\\www.linkedin.com/in/vidyuts"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="linkedin"
+				<p id="project-status" class="project-status" aria-live="polite"></p>
+			</section>
+			<section class="contact section-wrap" id="contact">
+				<div class="section-label"><span>03</span> GET IN TOUCH</div>
+				<div class="contact-content">
+					<h2>Have an interesting<br /><span>problem to solve?</span></h2>
+					<p>
+						I'm always happy to talk about software, AI, data, or a project
+						worth building.
+					</p>
+					<a class="button button-primary" href="mailto:vidyuts2026@gmail.com"
+						>Get in touch ↗</a
 					>
-						<i class="fa-brands fa-linkedin"></i>
-					</a>
-					<a
-						href="https://github.com/vidx0"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="github"
-					>
-						<i class="fa-brands fa-github"></i>
-					</a>
 				</div>
-				<hr />
-<!--	<p class="footer__text">
-			&copy; <span id="year"></span> - Template by
-					<a
-						href="https://github.com/AnilSeervi"
-						target="_blank"
-						rel="noopener noreferrer"
-						>Anil Seervi</a
-					>. <br />Made with &hearts;
-				</p>
-			</div>
+			</section>
+		</main>
+		<footer class="footer wrap">
+			<a class="wordmark" href="#top">VS<span>.</span></a
+			><span>Vidyut Senthilkumar © 2026</span><a href="#top">BACK TO TOP ↑</a>
 		</footer>
-END Footer Section -->
-
-		<script>
-			document.getElementById("year").textContent = new Date().getFullYear();
-		</script>
-		<script src="./javascript/vanilla-tilt.min.js"></script>
-		<script type="text/javascript" src="./javascript/valtilt.js"></script>
 	</body>
 </html>
