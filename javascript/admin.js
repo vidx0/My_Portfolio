@@ -428,63 +428,9 @@
         }
     });
 
-async function loadSettings() {
-    const { data, error } = await db
-        .from("site_settings")
-        .select("resume_url")
-        .eq("id", 1)
-        .maybeSingle();
 
-    if (error) {
-        message("settings-message", error.message, true);
-        return;
-    }
 
-    $("resume-url").value = data?.resume_url || "";
-}
 
-$("settings-form").addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const url = $("resume-url").value.trim();
-    const settingsMessage = $("settings-message");
-
-    if (url) {
-        try {
-            const parsedUrl = new URL(url);
-
-            if (
-                parsedUrl.protocol !== "https:" &&
-                parsedUrl.protocol !== "http:"
-            ) {
-                throw new Error("Use an HTTP or HTTPS URL.");
-            }
-        } catch {
-            message(
-                "settings-message",
-                "Enter a valid HTTP or HTTPS resume URL.",
-                true
-            );
-            return;
-        }
-    }
-
-    message("settings-message", "Saving...");
-
-    const { error } = await db
-        .from("site_settings")
-        .update({
-            resume_url: url || null
-        })
-        .eq("id", 1);
-
-    if (error) {
-        message("settings-message", error.message, true);
-        return;
-    }
-
-    message("settings-message", "Resume link saved successfully.");
-});
 
     db.auth.onAuthStateChange((_event, session) => {
         showDashboard(!!session);
